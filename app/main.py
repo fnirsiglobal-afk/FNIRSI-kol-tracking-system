@@ -11,7 +11,6 @@
   子状态描述      ← latest_status.sub_status_descr（文本）
   最新事件时间    ← latest_event.time_utc（日期）
   运输商          ← carrier name（单选，用 carrier code 推断）
-  揽收时间        ← pickup_time（日期）
   签收时间        ← delivered event time（日期）
   更新时间        ← 每次写入时的当前时间（日期）
 """
@@ -53,7 +52,7 @@ FIELD_SUB_STATUS     = os.getenv("FIELD_SUB_STATUS",     "物流子状态")
 FIELD_SUB_STATUS_DESC= os.getenv("FIELD_SUB_STATUS_DESC","子状态描述")
 FIELD_LATEST_EVENT_T = os.getenv("FIELD_LATEST_EVENT_T", "最新事件时间")
 FIELD_CARRIER        = os.getenv("FIELD_CARRIER",        "运输商")
-FIELD_PICKUP_TIME    = os.getenv("FIELD_PICKUP_TIME",    "揽收时间")
+FIELD_DELIVERED_TIME = os.getenv("FIELD_DELIVERED_TIME", "签收时间")
 FIELD_UPDATE_TIME    = os.getenv("FIELD_UPDATE_TIME",    "更新时间")
 
 # 定时任务
